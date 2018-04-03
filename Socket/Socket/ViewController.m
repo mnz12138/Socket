@@ -10,6 +10,7 @@
 #import "SocketManager.h"
 #import "CocoaAsyncSocketManager.h"
 #import "SocketRocketManager.h"
+#import "MQTTManager.h"
 
 @interface ViewController ()
 
@@ -18,6 +19,7 @@
 @property (strong, nonatomic) SocketManager *socketManager;
 @property (strong, nonatomic) CocoaAsyncSocketManager *cocoaAsyncSocketManager;
 @property (strong, nonatomic) SocketRocketManager *socketRocketManager;
+@property (strong, nonatomic) MQTTManager *mqttManager;
 
 @end
 
@@ -30,6 +32,7 @@
     _socketManager = [SocketManager share];
     _cocoaAsyncSocketManager = [CocoaAsyncSocketManager share];
     _socketRocketManager = [SocketRocketManager share];
+    _mqttManager = [MQTTManager share];
 }
 
 - (IBAction)sendAction {
@@ -37,21 +40,27 @@
     
 //    [_cocoaAsyncSocketManager sendMsg:self.messageTextField.text];
     
-    [_socketRocketManager sendMsg:self.messageTextField.text];
+//    [_socketRocketManager sendMsg:self.messageTextField.text];
+    
+    [_mqttManager sendMsg:self.messageTextField.text];
 }
 - (IBAction)connectAction {
 //    [_socketManager connectIp:"127.0.0.1" port:6969];
     
 //    [_cocoaAsyncSocketManager connectIp:@"127.0.0.1" port:6969];
     
-    [_socketRocketManager connectIp:@"127.0.0.1" port:6969];
+//    [_socketRocketManager connectIp:@"127.0.0.1" port:6969];
+    
+    [_mqttManager connectIp:@"127.0.0.1" port:6969];
 }
 - (IBAction)disconnectAction {
 //    [_socketManager disConnect];
     
 //    [_cocoaAsyncSocketManager disConnect];
     
-    [_socketRocketManager disConnect];
+//    [_socketRocketManager disConnect];
+    
+    [_mqttManager disConnect];
 }
 - (IBAction)sendPingAction {
     [_socketRocketManager ping];

@@ -9,5 +9,6 @@ target 'Socket' do
 
 pod 'CocoaAsyncSocket'
 pod 'SocketRocket'
+pod 'MQTTKit', '~> 0.1.0'
 
 end
