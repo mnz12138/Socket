@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+//Socket三方库使用封装
 @interface CocoaAsyncSocketManager : NSObject
 
 + (instancetype)share;

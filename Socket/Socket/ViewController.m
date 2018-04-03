@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "SocketManager.h"
 #import "CocoaAsyncSocketManager.h"
+#import "SocketRocketManager.h"
 
 @interface ViewController ()
 
@@ -16,6 +17,7 @@
 
 @property (strong, nonatomic) SocketManager *socketManager;
 @property (strong, nonatomic) CocoaAsyncSocketManager *cocoaAsyncSocketManager;
+@property (strong, nonatomic) SocketRocketManager *socketRocketManager;
 
 @end
 
@@ -27,22 +29,32 @@
     
     _socketManager = [SocketManager share];
     _cocoaAsyncSocketManager = [CocoaAsyncSocketManager share];
+    _socketRocketManager = [SocketRocketManager share];
 }
 
 - (IBAction)sendAction {
 //    [_socketManager sendMsg:self.messageTextField.text];
     
-    [_cocoaAsyncSocketManager sendMsg:self.messageTextField.text];
+//    [_cocoaAsyncSocketManager sendMsg:self.messageTextField.text];
+    
+    [_socketRocketManager sendMsg:self.messageTextField.text];
 }
 - (IBAction)connectAction {
 //    [_socketManager connectIp:"127.0.0.1" port:6969];
     
-    [_cocoaAsyncSocketManager connectIp:@"127.0.0.1" port:6969];
+//    [_cocoaAsyncSocketManager connectIp:@"127.0.0.1" port:6969];
+    
+    [_socketRocketManager connectIp:@"127.0.0.1" port:6969];
 }
 - (IBAction)disconnectAction {
 //    [_socketManager disConnect];
     
-    [_cocoaAsyncSocketManager disConnect];
+//    [_cocoaAsyncSocketManager disConnect];
+    
+    [_socketRocketManager disConnect];
+}
+- (IBAction)sendPingAction {
+    [_socketRocketManager ping];
 }
 
 - (void)didReceiveMemoryWarning {
