@@ -8,12 +8,14 @@
 
 #import "ViewController.h"
 #import "SocketManager.h"
+#import "CocoaAsyncSocketManager.h"
 
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *messageTextField;
 
 @property (strong, nonatomic) SocketManager *socketManager;
+@property (strong, nonatomic) CocoaAsyncSocketManager *cocoaAsyncSocketManager;
 
 @end
 
@@ -24,16 +26,23 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     _socketManager = [SocketManager share];
+    _cocoaAsyncSocketManager = [CocoaAsyncSocketManager share];
 }
 
 - (IBAction)sendAction {
-    [_socketManager sendMsg:self.messageTextField.text];
+//    [_socketManager sendMsg:self.messageTextField.text];
+    
+    [_cocoaAsyncSocketManager sendMsg:self.messageTextField.text];
 }
 - (IBAction)connectAction {
-    [_socketManager connectIp:"127.0.0.1" port:6969];
+//    [_socketManager connectIp:"127.0.0.1" port:6969];
+    
+    [_cocoaAsyncSocketManager connectIp:@"127.0.0.1" port:6969];
 }
 - (IBAction)disconnectAction {
-    [_socketManager disConnect];
+//    [_socketManager disConnect];
+    
+    [_cocoaAsyncSocketManager disConnect];
 }
 
 - (void)didReceiveMemoryWarning {

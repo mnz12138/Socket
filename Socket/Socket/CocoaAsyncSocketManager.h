@@ -1,5 +1,5 @@
 //
-//  SocketManager.h
+//  CocoaAsyncSocketManager.h
 //  Socket
 //
 //  Created by Apple on 2018/4/3.
@@ -8,11 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SocketManager : NSObject
+@interface CocoaAsyncSocketManager : NSObject
 
 + (instancetype)share;
-- (void)connectIp:(const char *)server_ip port:(unsigned short)server_port;
+- (BOOL)connectIp:(NSString *)server_ip port:(const uint16_t)server_port;
 - (void)disConnect;
 - (void)sendMsg:(NSString *)msg;
+- (void)pullTheMsg;
 
 @end

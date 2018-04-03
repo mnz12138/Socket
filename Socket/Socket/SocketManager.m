@@ -31,7 +31,7 @@
     return instance;
 }
 #pragma mark - 对外逻辑
-- (void)connectIp:(const char *)server_ip port:(short)server_port {
+- (void)connectIp:(const char *)server_ip port:(unsigned short)server_port {
     [self initScoketIp:server_ip port:server_port];
 }
 - (void)disConnect {
@@ -60,7 +60,7 @@
     }
 }
 
-- (void)initScoketIp:(const char *)server_ip port:(short)server_port
+- (void)initScoketIp:(const char *)server_ip port:(unsigned short)server_port
 {
     //每次连接前，先断开连接
     if (_clientScoket != 0) {

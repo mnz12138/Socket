@@ -14,6 +14,7 @@
 		188C322E20731BFF001191BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188C322C20731BFF001191BE /* LaunchScreen.storyboard */; };
 		188C323120731BFF001191BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 188C323020731BFF001191BE /* main.m */; };
 		188C323920731C11001191BE /* SocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 188C323820731C11001191BE /* SocketManager.m */; };
+		188C323C207320D8001191BE /* CocoaAsyncSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 188C323B207320D8001191BE /* CocoaAsyncSocketManager.m */; };
 		E0C7F29D93EE3B9E15EED32A /* libPods-Socket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 936AFEF2623208190E64722B /* libPods-Socket.a */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,8 @@
 		188C323020731BFF001191BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		188C323720731C11001191BE /* SocketManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocketManager.h; sourceTree = "<group>"; };
 		188C323820731C11001191BE /* SocketManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocketManager.m; sourceTree = "<group>"; };
+		188C323A207320D8001191BE /* CocoaAsyncSocketManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CocoaAsyncSocketManager.h; sourceTree = "<group>"; };
+		188C323B207320D8001191BE /* CocoaAsyncSocketManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CocoaAsyncSocketManager.m; sourceTree = "<group>"; };
 		65787A6BFA49EFE299F4E134 /* Pods-Socket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Socket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Socket/Pods-Socket.debug.xcconfig"; sourceTree = "<group>"; };
 		936AFEF2623208190E64722B /* libPods-Socket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Socket.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7D0C6D7014AFE88F1C31636 /* Pods-Socket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Socket.release.xcconfig"; path = "Pods/Target Support Files/Pods-Socket/Pods-Socket.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +77,8 @@
 				188C322520731BFF001191BE /* ViewController.m */,
 				188C323720731C11001191BE /* SocketManager.h */,
 				188C323820731C11001191BE /* SocketManager.m */,
+				188C323A207320D8001191BE /* CocoaAsyncSocketManager.h */,
+				188C323B207320D8001191BE /* CocoaAsyncSocketManager.m */,
 				188C322720731BFF001191BE /* Main.storyboard */,
 				188C322A20731BFF001191BE /* Assets.xcassets */,
 				188C322C20731BFF001191BE /* LaunchScreen.storyboard */,
@@ -226,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				188C322620731BFF001191BE /* ViewController.m in Sources */,
+				188C323C207320D8001191BE /* CocoaAsyncSocketManager.m in Sources */,
 				188C323120731BFF001191BE /* main.m in Sources */,
 				188C323920731C11001191BE /* SocketManager.m in Sources */,
 				188C322320731BFF001191BE /* AppDelegate.m in Sources */,
